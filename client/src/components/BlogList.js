@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+
+
 function BlogList() {
   const [blogs, setBlogs] = useState([]);
 
@@ -11,9 +13,11 @@ function BlogList() {
 
   return (
     <div>
+      {console.log(blogs,"thi is from the front end page")}
       {blogs.map(blog => (
         <div key={blog.id}>
           <h2>{blog.title}</h2>
+          
           <p>{blog.content}</p>
         </div>
       ))}
